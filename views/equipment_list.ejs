@@ -1,0 +1,32 @@
+<% include _header %>
+    <h1> Mostrar Equipamento</h1>
+
+    <% equipment.forEach((equipment)=>{ %>
+        <div class="panel panel-default">
+
+
+            <div class="panel-heading">
+                <a>
+                    <label class="col-form-label">Descripcion:</label>
+                    <%= equipment.description %>
+                </a>
+
+            </div>
+            <div class="row" class="panel-body">
+                <label class="col-md-1 col-form-label">Fuerza:</label>
+                <label class="col-form-label"><%= equipment.weight %></label>
+            </div>
+            <div class="row">
+                <label class="col-md-1 col-form-label">Categoria:</label>
+                <label class="col-form-label"><%= equipment.category %></label>
+            </div>
+            <div class="row">
+                <label class="col-md-1 col-form-label">Defensa:</label>
+                <label class="col-form-label"><%= equipment.defense %></label>
+            </div>
+
+        </div>
+
+        <% }) %>
+
+            <% include _footer %>
